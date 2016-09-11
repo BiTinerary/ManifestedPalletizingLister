@@ -4,7 +4,7 @@ Create TimeStamped text files, in DateStamped Pallet Folders, that can be parsed
 Dependencies: Python (Runs on Windows or Linux File Structure)<br>
 `import os`<br>
 `import datetime`<br>
-`import re`
+`import re` #Not yet but absolutely in the future
 
 ## OverAll Useage
 1: Scan Pallet Number, currently hard coded <b>'StartPallet'</b>. #Will be changed to specific load/manufacturer regex<br>

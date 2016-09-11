@@ -11,7 +11,7 @@ Create TimeStamped text files, in DateStamped Pallet Folders, that can be parsed
 
 ~ <strike>Error handling</strike> is pretty smooth. Could use a titch more refining prior to File creation<br>
 ~ Re order while loop. So that terminal print references the Pallet name once, followed by each additional SKU.<br>
-* This is tricky since error handling linux/win `clear`/`cls` whould be convoluted. Find work around.
+* This is tricky since error handling linux/win `clear`/`cls` whould be convoluted. Find work around.<br>
 ~ Incorporate regex's for Pallet Number and SKU's.
 * Loose enough to be forward compatible, so we aren't editing code when manufacturers change
 * specific enough to differentiate between SKU/Pallet# to optimize error handling and file manipulation

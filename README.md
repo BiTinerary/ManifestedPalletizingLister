@@ -16,4 +16,4 @@ Create TimeStamped text files, in DateStamped Pallet Folders, that can be parsed
 ~ Incorporate regex's for Pallet Number and SKU's.
 * Loose enough to be forward compatible, so we aren't editing code when manufacturers change
 * specific enough to differentiate between SKU/Pallet# to optimize error handling and file manipulation
-* Sidenote: Determine regex's from key's in a dictionary file where values are Fingerhut, Waterford, etc..?
+* Sidenote: `tr/except` user input with regex's from key's in a dictionary file, where values are Fingerhut, Waterford, etc..?

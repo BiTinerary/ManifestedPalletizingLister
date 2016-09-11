@@ -4,8 +4,8 @@ import datetime
 cwd = os.getcwd()
 opj = os.path.join
 
-folderWithTodaysDate = opj(cwd, str(datetime.date.today().strftime('X%m.X%d.20%y').replace('X0', '').replace('X', '')))
-currentTimeStampFile = str(datetime.datetime.now().strftime('%I.%M.%S %p'))+'.txt' #Create txt file with timestamp name. Change for .csv, etc...?
+folderWithTodaysDate = opj(cwd, str(datetime.date.today().strftime('X%m.X%d.20%y').replace('X0', '').replace('X', ''))) # datetime format leads single digit numbers with ZEROS (0) so .replace(X0) removes the zero. .replace(X) replaces X when m/d/y is 2 digits
+currentTimeStampFile = str(datetime.datetime.now().strftime('%I.%M.%S %p')) + '.txt' #Create txt file with timestamp name. Change for .csv, etc...?
 
 def PalletizeInput():
 	#Add another input here for scanning barcode that's clear text corresponds to "Let's Start Palletizing", "Let's start Counting", "Let's stop palletizing", etc...

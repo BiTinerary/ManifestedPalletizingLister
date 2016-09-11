@@ -2,9 +2,10 @@
 Create TimeStamped text files, in DateStamped Pallet Folders, that can be parsed into Manifests, Pallets and Ebay Exchange .csv headers.
 
 ## OverAll Useage
-~ Scan Pallet Number, currently hard coded <b>'StartPallet'</b>. #Will be changed to specific load/manufacturer regex<br>
+1: Scan Pallet Number, currently hard coded <b>'StartPallet'</b>. #Will be changed to specific load/manufacturer regex<br>
 * New file is created with today's date
-~ Scan Summin on the Pallet, currently accepts any alphanumeric string of any length. # Should apply loose regex later<br>
+
+2: Scan Summin on the Pallet, currently accepts any alphanumeric string of any length. # Should apply loose regex later<br>
 * Create file with current timestamp, then append the "Scan Summin" input with a trailing newline character.<br>
 
 ###TODO 

@@ -1,9 +1,10 @@
 # ManifestedPalletizingLister
 Create TimeStamped text files, in DateStamped Pallet Folders, that can be parsed into Manifests, Pallets and Ebay Exchange .csv headers.
 
-Dependencies:<br> Python (Runs on Windows or Linux File Structure)
-`import os`
-`import datetime`
+Dependencies: Python (Runs on Windows or Linux File Structure)<br>
+`import os`<br>
+`import datetime`<br>
+`import re`
 
 ## OverAll Useage
 1: Scan Pallet Number, currently hard coded <b>'StartPallet'</b>. #Will be changed to specific load/manufacturer regex<br>

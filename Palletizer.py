@@ -1,22 +1,26 @@
 import os
 import datetime
 
+cwd = os.getcwd()
+opj = os.path.join
+
+folderWithTodaysDate = opj(cwd, str(datetime.date.today().strftime('X%m.X%d.20%y').replace('X0', '').replace('X', '')))
+currentTimeStampFile = str(datetime.datetime.now().strftime('%I.%M.%S %p'))+'.txt' #Create txt file with timestamp name. Change for .csv, etc...?
+
 def PalletizeInput():
 		scanPalletNumber = raw_input('\nPallet Number: ')
 
 		if str(scanPalletNumber) == 'StartPallet': # change later for specific Pallet Number regex (Company specific of general for forward compatibility)
-			cwd = os.getcwd()
-			folderWithTodaysDate = os.path.join(cwd, str(datetime.date.today().strftime('X%m.X%d.20%y').replace('X0', '').replace('X', '')))
+
+			#folderWithTodaysDate = os.path.join(cwd, str(datetime.date.today().strftime('X%m.X%d.20%y').replace('X0', '').replace('X', '')))
 			if os.path.exists(folderWithTodaysDate) == True: #If file w/ today's date exists, then continue the script.
 				pass
 			else: #else create the directory with read/write/exe permissions.
 				os.makedirs(folderWithTodaysDate, 0o666) #read/write permissions for creating files inside python created folder. For Win & Linux.
-			
-			currentTimeStamp = str(datetime.datetime.now().strftime('%I.%M.%S %p'))+'.txt' #Create txt file with timestamp name. Change for .csv, etc...?
 
 			#File name should also be appended with 'COMPLETE' after timestamp when script is completely/exited properly (scan pallet number again?)
 			
-			createFileInDateDirectory = str(os.path.join(folderWithTodaysDate, currentTimeStamp)) 
+			createFileInDateDirectory = str(opj(folderWithTodaysDate, currentTimeStampFile)) 
 			while True:
 				try:
 					print("\nLast Scanned SKU: " + str(scanSkusOnPallet))
@@ -38,3 +42,15 @@ def PalletizeInput():
 			print("You didn't scan a valid pallet number")
 
 PalletizeInput()
+
+#TODO
+#Find a way to select previous [dynamic] timestamped file OR create simple GUI for manually slecting which pallets to read/parse for manifesting/listing
+#Or should I just code for selecting all datestamp*-COMPLETE.txt files from 'todays' date folder. If another .txt is needed take function input.
+
+"""
+def OpenPalletFile():
+	with open(currentTimeStampFile, 'r') as f:
+		print(f.readlines())
+
+OpenPalletFile()
+"""

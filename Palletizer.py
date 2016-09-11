@@ -8,6 +8,7 @@ folderWithTodaysDate = opj(cwd, str(datetime.date.today().strftime('X%m.X%d.20%y
 currentTimeStampFile = str(datetime.datetime.now().strftime('%I.%M.%S %p'))+'.txt' #Create txt file with timestamp name. Change for .csv, etc...?
 
 def PalletizeInput():
+	#Add another input here for scanning barcode that's clear text corresponds to "Let's Start Palletizing", "Let's start Counting", "Let's stop palletizing", etc...
 		scanPalletNumber = raw_input('\nPallet Number: ')
 
 		if str(scanPalletNumber) == 'StartPallet': # change later for specific Pallet Number regex (Company specific of general for forward compatibility)

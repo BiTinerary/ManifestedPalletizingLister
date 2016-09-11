@@ -18,10 +18,21 @@ def PalletizeInput():
 			
 			createFileInDateDirectory = str(os.path.join(folderWithTodaysDate, currentTimeStamp)) 
 			while True:
-				scanSkusOnPallet = raw_input('\nScan Summin: ')
-				with open(createFileInDateDirectory, 'a') as f:
-					f.write(scanSkusOnPallet + '\n')
-					f.close()
+				try:
+					print("\nLast Scanned SKU: " + str(scanSkusOnPallet))
+				except UnboundLocalError:
+					continue
+				finally:
+					print('Current Pallet Number: ' + str(scanPalletNumber))
+					scanSkusOnPallet = raw_input('Scan Summin: ')
+					with open(createFileInDateDirectory, 'a') as f:
+						f.write(scanSkusOnPallet + '\n')
+						f.close()
+						if str(scanPalletNumber) == str(scanSkusOnPallet):
+							#rename file name =+ filename + 'Finished'
+							break
+						else:
+							pass
 		else:
 			print('Put Error Handling Here') # try/except would reformat entire script, elif statements for later loads/manufacturers?
 			print("You didn't scan a valid pallet number")

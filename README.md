@@ -15,7 +15,7 @@ Dependencies:<br> Python (Runs on Windows or Linux File Structure)
 3: Scan pallet number again, indicating end of pallet. Exiting while loop and ending script.
 
 ###TODO 
-~ Add/Rename '-COMPLETE' to every file that has been ended appropriately. In case several/items are scanned too many times.
+~ Add/Rename '-COMPLETE' to every file that has been ended appropriately. In case several/items are scanned too many times and end user needs to terminate script. We would still want to keep the logs though.
 * Biggest issue is end user scanning a SKU too many times, messing up quantities, etc...
   * Same can be said for 'missing' a sku as well though.
   * Require same box to be scanned twice before moving on to next box?
